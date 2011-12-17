@@ -6,4 +6,5 @@ ru:
   warehouse: Склад
   all_vendors: Все поставщики
   source: Источник
-
+  product_vendor_url: Ссылка на товар
+  product_vendor_url_2: Ссылка на замену
