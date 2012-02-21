@@ -1,14 +1,17 @@
 %table.index
   %tr
+    %th= t('item_sku')
     %th= t('item_description')
     %th.price= t('product_vendor_url')
   - @order.line_items.each do |item|
     %tr
       - locals = {:item => item}
+      %td{:width => "40"}
+        = item.variant.product.sku
       %td{:width => "100"}
-        = item.variant.product.name
+        =  item.variant.product.name
         = "(" + variant_options(item.variant) + ")" unless item.variant .option_values.empty?
       %td
-        =  item.product.product_vendor_url
+        =   item.product.product_vendor_url
         %br
-        =  item.product.product_vendor_url_2
+        =   item.product.product_vendor_url_2
